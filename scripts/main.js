@@ -31,21 +31,21 @@ const bills = [
 
 const users = [
   {
-    name: "Wil",
-    numberDoc: 27337895,
-    password: "wildel",
+    name: "Carlos",
+    numberDoc: 1234,
+    password: "1234",
     typeUser: 2,
   },
   {
-    name: "Diego",
-    numberDoc: 3441148,
-    password: "pupuchurra",
+    name: "Pedro",
+    numberDoc: 2345,
+    password: "2345",
     typeUser: 2,
   },
   {
-    name: "Sergio",
-    numberDoc: 12345,
-    password: "yopis",
+    name: "Juan",
+    numberDoc: 3456,
+    password: "3456",
     typeUser: 1,
   },
 ];
