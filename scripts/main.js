@@ -1,6 +1,8 @@
-let user = null;
+//Declaración de variables.
+let user = null;     
 let totalBills = 0;
 
+// Crea una lista de objetos para los billetes, cada objeto tiene el tipo de billete, la cantidad de billetes y el total de la suma de todos los billets ingresados de ese tipo.
 const bills = [
   {
     type: 5000,
@@ -29,6 +31,8 @@ const bills = [
   },
 ];
 
+// Crea lista de objetos de usuario, cada objeto contiene el nombre, número de documento, contraseña y tipo de cada usuario. El usuario No.1 es administrador y el No.2 es cliente.
+
 const users = [
   {
     name: "Carlos",
@@ -50,10 +54,11 @@ const users = [
   },
 ];
 
+// Función para iniciar sesión, es un bucle que se ejecutará hasta que el usuario escriba los datos correctos. Se usa un .find() para recorrer el array de usuarios y comparar el número de documento que tiene guardado con el que se está ingresando y si coincide retorna al usuario y se termina el bucle. Si éste usuario que se retornó es tipo 1 (administrador) se ejecuta la función de ingresarDinero(), si es cliente y el cajero está en cero le dirá que está en mantenimiento y que vuelva pronto sinó se ejecuta la función de retirar().
 function askUser() {
   while (!user) {
     numberDoc = Number(prompt("Indroduce tu numero de documento"));
-    // password = Number(prompt("Indroduce tu numero de documento"));
+    password = Number(prompt("Indroduce tu numero de documento"));
     user = users.find((element) => element.numberDoc === numberDoc);
     if (!user) {
       console.log("Usuario no valido");
